@@ -5,9 +5,22 @@
  <table>
 
     <tr>
-        <th>ID PRODOTTI</th>
-        <th> Nome Prodotti</th>
-         <th>ID Categoria</th>
+        <th>ProductID</th>
+        <th>ProductName</th>
+         <th>SupplierID</th>
+         <th>CategoryID</th>
+         <th> Unit</th>
+          <th>Price</th>
     </tr>
-
- </table>
+    {%for prodotto in prodotti%}
+      <tr>
+         <td>{{prodotto[0]}}</td>
+         <td>{{prodotto[1]}}</td>
+         <td>{{prodotto[2]}}</td>
+         <td><a href="{{url_for('category',categoryID=prodotto[3])}}">{{prodotto[3]}}</a></td>
+         <td>{{prodotto[4]}}</td>
+         <td>{{prodotto[5]}}</td>
+      </tr>
+    {%endfor%}
+</table>
+   {%endblock%}
