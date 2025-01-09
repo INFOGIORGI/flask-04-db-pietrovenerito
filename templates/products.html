@@ -12,14 +12,14 @@
          <th> Unit</th>
           <th>Price</th>
     </tr>
-    {%for prodotto in prodotti%}
+    {%for i in prodotti%}
       <tr>
-         <td>{{prodotto[0]}}</td>
-         <td>{{prodotto[1]}}</td>
-         <td>{{prodotto[2]}}</td>
-         <td><a href="{{url_for('category',categoryID=prodotto[3])}}">{{prodotto[3]}}</a></td>
-         <td>{{prodotto[4]}}</td>
-         <td>{{prodotto[5]}}</td>
+         <td>{{i[0]}}</td>
+         <td>{{i[1]}}</td>
+         <td>{{i[2]}}</td>
+         <td><a href="{{url_for('categories')}}">{{i[3]}}</a></td>
+         <td>{{i[4]}}</td>
+         <td>{{i[5]}}</td>
       </tr>
     {%endfor%}
 </table>
